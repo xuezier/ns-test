@@ -1,0 +1,11 @@
+<ScrollView orientation="vertical">
+    <StackLayout>
+        <Label text="hello world" />
+        <Button text="Click Me" tap="tapme" />
+        <Label text="{{Name||'hehehe'}}" />
+        <DatePicker year="2010"></DatePicker>
+        <Label text="wow!!!" />
+        <StackLayout id="teleport">
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

@@ -1,0 +1,14 @@
+<Page loaded="loaded">
+    <!-- <Page loaded="loaded" actionBarHidden="true"> -->
+    <Page.actionBar>
+        <ActionBar title="App Icon Demo">
+            <!--  <NavigationButton text="Back" android.systemIcon="ic_menu_back"></NavigationButton>
+            <ActionBar.actionItems>
+                <ActionItem android.position="popup" text="Add contact" />
+                <ActionItem android.position="popup" text="About" />
+            </ActionBar.actionItems> -->
+        </ActionBar>
+    </Page.actionBar>
+    <TabView id="tapView">
+    </TabView>
+</Page>
