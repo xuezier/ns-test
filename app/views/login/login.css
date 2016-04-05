@@ -1,8 +1,18 @@
+StackLayout {
+    background-color: #f05b72;
+}
+
+Image {
+    margin: 20pt auto;
+    margin-top: 80pt;
+    width: 75%;
+}
+
 Button {
-    background-color: #2a5caa;
-    color: #fff;
-    border-color: #426ab3;
-    border-width: 4px;
-    border: 4px solid #426ab3;
-    border-radius: 0px;
+    margin-top: 50pt;
+    height: 70px;
+    background-color: #d71345;
+    width: 85%;
+    border-radius: 35;
+    border-width: 0.1;
 }

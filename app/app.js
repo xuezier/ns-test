@@ -44,17 +44,23 @@ global.ViewFactoryBuilder = function(moduleName, outExports, option) {
         moduleName ? this.getViewModule(moduleName, outExports, option) : false;
     } catch (e) {
         console.log("error", e);
-    }
+    };
 };
 
 // global module defined
 global.co = require("co");
 global.observable = require("data/observable").Observable;
-global.observableArray=require("data/observable-array").ObservableArray;
+global.observableArray = require("data/observable-array").ObservableArray;
 global.pageModule = require("ui/page");
 global.frame = require("ui/frame");
 global.view = require("ui/core/view");
 
+// import iconPackage
+try {
+    global.iconPackage = require('~/user-module/iconPackage').iconPackage;
+} catch (e) {
+    console.log("importIconError:", e);
+}
 
 app.mainModule = "views/login/login"; //程序主入口
 app.start();

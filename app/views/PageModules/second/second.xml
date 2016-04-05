@@ -1,5 +1,5 @@
 <StackLayout id="second" loaded="secondTap">
 	<Label text="second" />
 	<Label text="{{Name}}" />
-	<Button text="Tap Me Second" tap="secondTap" />
+	<Button text="Tap Me Second" tap="secondTap" color="#fff" />
 </StackLayout>

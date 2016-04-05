@@ -1,42 +1,42 @@
-var page;
-var LabelModule = require("ui/label");
+var LoadingIndicator = require("nativescript-loading-indicator").LoadingIndicator;
 
-var layout = require("ui/layouts/stack-layout");
-var button = require("ui/button");
+var loader = new LoadingIndicator();
 
-var person = new observable({ Name: "jeje" });
-
-var viewFactory = new ViewFactoryBuilder();
-
-var count = 0;
-
-exports.tapme = function(args) {
-    var c = count++;
-    console.log("taps!");
-    person.Name = "taps!" + c;
+var options = {
+    message: 'Loading...',
+    progress: 0.65,
+    android: {
+        indeterminate: true,
+        cancelable: false,
+        max: 100,
+        progressNumberFormat: "%1d/%2d",
+        progressPercentFormat: 0.53,
+        progressStyle: 1,
+        secondaryProgress: 1
+    }
 };
+
+// Do whatever it is you want to do while the loader is showing, then
+// loader.show(options);
 exports.loaded = function(args) {
-    page = args.object;
-    page.bindingContext = person;
-    var tapView = page.getViewById("tapView");
-    var views = viewFactory.getViewModule(["side", "second"], exports, function(viewports) {
-        var items = [];
-        viewports.forEach(function(item, index) {
-            items.push(new observable({
-                title: "tap" + index,
-                view: item
-            }));
-        });
-        items[0].title = "tap me";
-        tapView.items = items;
-        tapView.on("selectedIndexChanged", (aas) => {
-            console.log(tapView.items[0].title="hehe"+Math.random());
-            tapView._eachChildView(function (v) {
-                console.log(v)
-            })
-        });
-        console.log(tapView.on)
-        console.log(viewports[0]);
-    });
-    return page;
+    var page = args.object;
+    var v = page.getViewById("mainButton");
+
+};
+exports.jump = function(argument) {
+    loader.show(options);
+    setTimeout(function() {
+        console.log("hehe");
+        loader.hide();
+        frame.topmost().navigate({
+            moduleName: "views/main/main",
+            animated: true,
+            clearHistory: true,
+            transition: {
+                name: "slideLeft",
+                duration: 380,
+                curve: "easeIn"
+            }
+        })
+    }, 3000);
 };

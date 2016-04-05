@@ -1,0 +1,25 @@
+#tapme {
+	font-size: 30;
+	font-weight: bold;
+    background-color: #d71345;
+    border-radius: 0.1;
+    width: 95%;
+	color: #fff;
+}
+
+Page {
+}
+
+TabView {
+    background-color: #f05b72;
+    color: #fff;
+}
+
+ActionBar {
+    background-color:white;
+}
+
+DatePicker{
+	background-color: transparent;
+	color: #fff;
+}

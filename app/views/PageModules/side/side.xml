@@ -1,7 +1,8 @@
 <ScrollView orientation="vertical">
     <StackLayout>
-        <Label text="hello world" />
-        <Button text="Click Me" tap="tapme" />
+        <Label text="hello world" color="red" />
+        <Button text="Click Me" tap="tapme" id="tapme" />
+        <Label text="{{icon.icon_home}}" class="icon" />
         <Label text="{{Name||'hehehe'}}" />
         <DatePicker year="2010"></DatePicker>
         <Label text="wow!!!" />
