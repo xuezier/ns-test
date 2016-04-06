@@ -28,7 +28,11 @@
 		"co": "^4.6.0",
 		"nativescript-loading-indicator": "^2.0.1",
 		"nativescript-statusbar": "^1.0.0",
-		"nativescript-themes": "^1.0.0",
+		"nativescript-telerik-ui-pro": "^1.0.1",
 		"tns-core-modules": "1.7.0"
+	},
+	"devDependencies": {
+		"nativescript-dev-typescript": "^0.3.1",
+		"typescript": "^1.8.9"
 	}
 }

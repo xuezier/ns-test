@@ -3,25 +3,75 @@ Button {
     border-radius: 0.1;
     width: 95%;
     margin: 10pt auto;
-	color: #fff;
-}
-
-Page {
+    color: #fff;
 }
 
 TabView {
     background-color: #f05b72;
     color: #fff;
 }
+
 TabView TabViewTitle {
-	color:#fff;
+    color: #fff;
 }
 
 ActionBar {
-    background-color:white;
+    background-color: white;
 }
 
-DatePicker{
-	background-color: transparent;
-	color: #fff;
+DatePicker {
+    background-color: transparent;
+    color: #fff;
+}
+
+.headbox {
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-color: #ddd;
+    background-image: url("~/views/imageSource/moodheadbg.jpg");
+    margin-top: 0;
+    background-size: cover;
+}
+
+.moodcontent {
+    background-color: #fff;
+    color: #130c0e;
+}
+
+.moodhead {
+    width: 100px;
+    height: 100px;
+}
+
+.moodheadtitle {
+    font-size: 25;
+    width: 100%;
+    text-align: center;
+}
+
+.day {
+    background-color: #d71345;
+}
+
+.moodListView {
+    height: 30;
+    /*background-color: #f05b72;*/
+}
+
+.moodListView Label {
+    font-size: 12;
+    padding: 5 0;
+    text-align: center;
+}
+
+.moodiconset {
+    margin-top: 20pt;
+}
+
+.moodiconset Label {
+    color: #d71345;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18;
 }

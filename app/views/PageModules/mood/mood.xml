@@ -1,0 +1,55 @@
+<DockLayout stretchLastChild="true" loaded="moodloaded" xmlns:lv="nativescript-telerik-ui-pro/listview">
+    <AbsoluteLayout class="headbox" dock="top">
+        <Image top="20" left="{{MoodHeadViewLeft}}" class="moodhead" src="~/views/imageSource/moodhead.png" />
+        <Label top="130" class="moodheadtitle" text="Welcome!!!" />
+    </AbsoluteLayout>
+    <ScrollView class="moodcontent">
+        <StackLayout>
+                <!--<ListView id="listView" items="{{moodHistory}}" rowHeight="50" scrollDirection="horizontal">
+                    <ListView.itemTemplate>
+                        <Label class="day" text="{{dayofmonth}}" />
+                    </ListView.itemTemplate>
+                </ListView>-->
+                <lv:RadListView class="moodListView" itemHeight="30" items="{{moodHistory}}">
+                    <lv:RadListView.listViewLayout>
+                        <lv:ListViewGridLayout scrollDirection="Vertical" spanCount="7" />
+                    </lv:RadListView.listViewLayout>
+                    <lv:RadListView.itemTemplate>
+                            <Label text="{{dayofmonth}}"/>
+                    </lv:RadListView.itemTemplate>
+                </lv:RadListView>
+                <lv:RadListView class="moodListView" itemHeight="30" items="{{moodHistory}}">
+                    <lv:RadListView.listViewLayout>
+                        <lv:ListViewGridLayout scrollDirection="Vertical" spanCount="7" />
+                    </lv:RadListView.listViewLayout>
+                    <lv:RadListView.itemTemplate>
+                            <Label text="{{dayofweek}}"/>
+                    </lv:RadListView.itemTemplate>
+                </lv:RadListView>
+                <GridLayout class="moodiconset" columns="*,*,*,*,*,*,*" rows="*,*,*">
+                    <Label col="0" class="icon" text="{{icon.icon_happy}}" />
+                    <Label col="1" class="icon" text="{{icon.icon_smile}}" />
+                    <Label col="2" class="icon" text="{{icon.icon_tongue}}" />
+                    <Label col="3" class="icon" text="{{icon.icon_sad}}" />
+                    <Label col="4" class="icon" text="{{icon.icon_grin}}" />
+                    <Label col="5" class="icon" text="{{icon.icon_cool}}" />
+                    <Label col="6" class="icon" text="{{icon.icon_angry}}" />
+                    <Label col="0" row="1" class="icon" text="{{icon.icon_evil}}" />
+                    <Label col="1" row="1" class="icon" text="{{icon.icon_shocked}}" />
+                    <Label col="2" row="1" class="icon" text="{{icon.icon_baffled}}" />
+                    <Label col="3" row="1" class="icon" text="{{icon.icon_confused}}" />
+                    <Label col="4" row="1" class="icon" text="{{icon.icon_neutral}}" />
+                    <Label col="5" row="1" class="icon" text="{{icon.icon_hipster}}" />
+                    <Label col="6" row="1" class="icon" text="{{icon.icon_wondering}}" />
+                    <Label col="0" row="2" class="icon" text="{{icon.icon_sleepy}}" />
+                    <Label col="1" row="2" class="icon" text="{{icon.icon_frustrated}}" />
+                    <Label col="2" row="2" class="icon" text="{{icon.icon_crying}}" />
+                    <Label col="3" row="2" class="icon" text="{{icon.icon_reddit}}" />
+                    <Label col="4" row="2" class="icon" text="{{icon.icon_heart}}" />
+                    <Label col="5" row="2" class="icon" text="{{icon.icon_man_woman}}" />
+                    <Label col="6" row="2" class="icon" text="{{icon.icon_music}}" />
+                </GridLayout>
+                <Button text="tap" tap="ontap" />
+        </StackLayout>
+    </ScrollView>
+</DockLayout>

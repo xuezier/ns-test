@@ -1,7 +1,0 @@
-<ScrollView id="second" loaded="secondTap">
-    <StackLayout>
-        <Label text="second" />
-        <Label text="{{Name}}" />
-        <Button text="Tap Me Second" tap="secondTap" color="#fff" />
-    </StackLayout>
-</ScrollView>

@@ -18,7 +18,6 @@ global.importViewModule = function(moduleName, teleporter, outExports, option) {
 // 创建路由对象，从外部引入文件并保存到viewport中
 global.ViewFactoryBuilder = function(moduleName, outExports, option) {
     try {
-
         this._ViewModule = {};
         this._ViewModules = [];
         this.getViewModule = function(moduleName, outExports, option) {
@@ -61,5 +60,25 @@ try {
     console.log("importIconError:", e);
 };
 
-app.mainModule = "views/login/login"; //程序主入口
+// get the local Decice Info
+var platformModule = require("platform");
+global.DeviceInfo = {
+    manufacturer: platformModule.device.manufacturer,
+    language: platformModule.device.language,
+    region: platformModule.device.region,
+    model: platformModule.device.model,
+    type: platformModule.device.deviceType,
+    os: platformModule.device.os,
+    osVersion: platformModule.device.osVersion,
+    sdkVersion: platformModule.device.sdkVersion,
+    width: platformModule.screen.mainScreen.widthPixels,
+    height: platformModule.screen.mainScreen.heightPixels,
+    widthDIPs: platformModule.screen.mainScreen.widthDIPs,
+    heightDIPs: platformModule.screen.mainScreen.heightDIPs,
+    scale: platformModule.screen.mainScreen.scale
+};
+// console.log(JSON.stringify(DeviceInfo));
+
+app.mainModule = "views/main/main"; //程序主入口
+// app.mainModule = "views/login/login"; //程序主入口
 app.start();
