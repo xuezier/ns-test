@@ -1,4 +1,4 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="loaded" actionBarHidden="true" backgroundSpanUnderStatusBar="true" xmlns:x="nativescript-statusbar">
+<Page loaded="loaded" actionBarHidden="true" backgroundSpanUnderStatusBar="true" xmlns:x="nativescript-statusbar">
     <x:StatusBar ios:barStyle="light" android:barStyle="#f05b72" />
     <StackLayout>
         <Image src="~/views/imageSource/login.png" />

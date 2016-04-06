@@ -1,12 +1,10 @@
 <ScrollView orientation="vertical">
     <StackLayout>
-        <Label text="hello world" color="red" />
+        <Label text="hello world"  />
         <Button text="Click Me" tap="tapme" id="tapme" />
         <Label text="{{icon.icon_home}}" class="icon" />
         <Label text="{{Name||'hehehe'}}" />
-        <DatePicker year="2010"></DatePicker>
+        <DatePicker year="2016" minDate="{{minDate}}"></DatePicker>
         <Label text="wow!!!" />
-        <StackLayout id="teleport">
-        </StackLayout>
     </StackLayout>
 </ScrollView>

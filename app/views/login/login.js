@@ -15,13 +15,12 @@ var options = {
         secondaryProgress: 1
     }
 };
-
 // Do whatever it is you want to do while the loader is showing, then
-// loader.show(options);
+// loader.show(options); 
+
+
 exports.loaded = function(args) {
     var page = args.object;
-    var v = page.getViewById("mainButton");
-
 };
 exports.jump = function(argument) {
     loader.show(options);
@@ -37,6 +36,6 @@ exports.jump = function(argument) {
                 duration: 380,
                 curve: "easeIn"
             }
-        })
+        });
     }, 3000);
 };

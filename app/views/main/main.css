@@ -1,9 +1,8 @@
-#tapme {
-	font-size: 30;
-	font-weight: bold;
+Button {
     background-color: #d71345;
     border-radius: 0.1;
     width: 95%;
+    margin: 10pt auto;
 	color: #fff;
 }
 
@@ -13,6 +12,9 @@ Page {
 TabView {
     background-color: #f05b72;
     color: #fff;
+}
+TabView TabViewTitle {
+	color:#fff;
 }
 
 ActionBar {

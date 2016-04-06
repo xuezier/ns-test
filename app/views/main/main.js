@@ -1,4 +1,3 @@
-
 var page;
 var LabelModule = require("ui/label");
 
@@ -9,12 +8,17 @@ var person = new observable({ Name: "jeje" });
 
 var viewFactory = new ViewFactoryBuilder();
 
+
+
 exports.loaded = function(args) {
     page = args.object;
+
     page.bindingContext = new observable({
         Name: person.Name,
-        icon: iconPackage
-    })
+        icon: iconPackage,
+        minDate: new Date(2015, 0, 1)
+    });
+
     var tapView = page.getViewById("tapView");
     var views = viewFactory.getViewModule(["side", "second"], exports, function(viewports) {
         var items = [];
@@ -32,8 +36,7 @@ exports.loaded = function(args) {
                 console.log(v)
             })
         });
-        // console.log(tapView.on)
-        // console.log(viewports[0]);
     });
+
     return page;
 };

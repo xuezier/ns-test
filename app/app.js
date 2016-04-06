@@ -60,7 +60,7 @@ try {
     global.iconPackage = require('~/user-module/iconPackage').iconPackage;
 } catch (e) {
     console.log("importIconError:", e);
-}
+};
 
 app.mainModule = "views/login/login"; //程序主入口
 app.start();

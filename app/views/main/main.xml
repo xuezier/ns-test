@@ -1,5 +1,5 @@
 <!-- <Page loaded="loaded"> -->
-<Page loaded="loaded" actionBarHidden="true" xmlns="http://schemas.nativescript.org/tns.xsd">
+<Page loaded="loaded" actionBarHidden="true">
     <Page.actionBar>
         <ActionBar title="App Icon Demo">
             <!--  <NavigationButton text="Back" android.systemIcon="ic_menu_back"></NavigationButton>
@@ -9,6 +9,6 @@
             </ActionBar.actionItems> -->
         </ActionBar>
     </Page.actionBar>
-    <TabView id="tapView" tabsBackgroundColor="#f05b72" selectedColor="#d71345">
+    <TabView id="tapView" tabsBackgroundColor="#f05b72" selectedColor="#d71345" color="#FFF">
     </TabView>
 </Page>
