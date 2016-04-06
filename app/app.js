@@ -6,13 +6,13 @@ var _base_view_path = "~/views/PageModules/";
 global.importViewModule = function(moduleName, teleporter, outExports, option) {
     if (typeof teleporter === 'object') {
         // if outExports is exist and is a function, set option as outExports
-        (outExports && (typeof outExports == 'object')) ? true: (option = outExports, outExports = {});
+        (outExports && (typeof outExports == 'object')) ? true : (option = outExports, outExports = {});
         var _ModulePath = _base_view_path + moduleName;
         var _ViewModule = builder.load({ path: _ModulePath, name: moduleName, exports: outExports });
         teleporter.removeChildren();
         teleporter.addChild(_ViewModule);
     };
-    (option && (typeof option == "function")) ? option(_ViewModule): false;
+    (option && (typeof option == "function")) ? option(_ViewModule) : false;
 };
 
 // 创建路由对象，从外部引入文件并保存到viewport中
@@ -23,9 +23,9 @@ global.ViewFactoryBuilder = function(moduleName, outExports, option) {
         this._ViewModules = [];
         this.getViewModule = function(moduleName, outExports, option) {
             // if outExports is exist and is a function, set option as outExports
-            (outExports && (typeof outExports == 'object')) ? true: (option = outExports, outExports = {});
+            (outExports && (typeof outExports == 'object')) ? true : (option = outExports, outExports = {});
             // change moduleName for Array
-            (typeof moduleName === "object") ? true: (moduleName = [moduleName]);
+            (typeof moduleName === "object") ? true : (moduleName = [moduleName]);
             // iterate through the array[moduleName] to load view 
             // clear this._ViewModules
             var _ViewModules = [];
@@ -38,7 +38,7 @@ global.ViewFactoryBuilder = function(moduleName, outExports, option) {
                 }));
             });
             this._ViewModules = _ViewModules;
-            (option && (typeof option == "function")) ? option(this._ViewModules): false;
+            (option && (typeof option == "function")) ? option(this._ViewModules) : false;
             return this._ViewModules;
         };
         moduleName ? this.getViewModule(moduleName, outExports, option) : false;
@@ -46,7 +46,6 @@ global.ViewFactoryBuilder = function(moduleName, outExports, option) {
         console.log("error", e);
     };
 };
-
 // global module defined
 global.co = require("co");
 global.observable = require("data/observable").Observable;
