@@ -6,7 +6,7 @@ for (var loop = 0; loop < 20; loop++) {
 exports.bodyLoaded = args => {
     bodyPage = args.object;
     bodyPage.bindingContext = new observable({
-        items: ["无", "轻微", "绞痛", "剧痛"],
+        items: ["none", "little ", "very", "sharp pain"],
         info: {
             Start: "2016/03/23",
             Period: "3",

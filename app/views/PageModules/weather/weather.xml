@@ -1,3 +1,86 @@
-<DockLayout>
-    <Label text="hehe" />
+<DockLayout stretchLastChild="true" class="weatherPage"  loaded="WeatherLoaded" xmlns:Card="nativescript-cardview">
+    <GridLayout class="today" columns="2*,3*" rows="2*,*" dock="top">
+        <StackLayout col="0" class="city">
+            <Label class="title" text="{{weatherInfo.cityInfo.c5}}" />
+            <Label text="{{'更新时间：'+weatherInfo.now.temperature_time}}" />
+        </StackLayout>
+        <StackLayout class="todaypic" col="1" class="b">
+            <Image  src="{{weatherInfo.now.weather_pic}}" />
+        </StackLayout>
+        <Label colSpan="2" row="1" text="{{weatherInfo.now.temperature+'°C，'+weatherInfo.now.weather+'，'+weatherInfo.now.wind_direction+'，'+weatherInfo.now.wind_power}}" />
+    </GridLayout>
+    <ScrollView class="forecast" id="forecast">
+        <StackLayout>
+            <StackLayout tap="weatherTap" class="first">
+                <GridLayout rows="2*,1*" columns="*,*">
+                    <Image src="{{weatherInfo.f1.day_weather_pic}}" />
+                    <StackLayout col="1">
+                        <Label text="{{weatherDate.f1}}" />
+                        <Label text="{{'全天气温：'+weatherInfo.f1.day_air_temperature+'°C，'+weatherInfo.f1.day_weather}}" />
+                    </StackLayout>
+                    <Label class="wind" row="1" colSpan="2" text="{{weatherInfo.f1.day_wind_direction+','+weatherInfo.f1.day_wind_power}}" />
+                </GridLayout>
+            </StackLayout>
+            <StackLayout tap="weatherTap" row="1" class="second">
+                <GridLayout rows="2*,1*" columns="*,*">
+                    <Image src="{{weatherInfo.f2.day_weather_pic}}" />
+                    <StackLayout col="1">
+                        <Label text="{{weatherDate.f2}}" />
+                        <Label text="{{'全天气温：'+weatherInfo.f2.day_air_temperature+'°C，'+weatherInfo.f2.day_weather}}" />
+                    </StackLayout>
+                    <Label class="wind" row="1" colSpan="2" text="{{weatherInfo.f2.day_wind_direction+','+weatherInfo.f1.day_wind_power}}" />
+                </GridLayout>
+            </StackLayout>
+            <StackLayout tap="weatherTap" row="2" class="third">
+                <GridLayout rows="2*,1*" columns="*,*">
+                    <Image src="{{weatherInfo.f3.day_weather_pic}}" />
+                    <StackLayout col="1">
+                        <Label text="{{weatherDate.f3}}" />
+                        <Label text="{{'全天气温：'+weatherInfo.f3.day_air_temperature+'°C，'+weatherInfo.f3.day_weather}}" />
+                    </StackLayout>
+                    <Label class="wind" row="1" colSpan="2" text="{{weatherInfo.f3.day_wind_direction+','+weatherInfo.f1.day_wind_power}}" />
+                </GridLayout>
+            </StackLayout>
+            <StackLayout tap="weatherTap" row="3" class="fourth">
+                <GridLayout rows="2*,1*" columns="*,*">
+                    <Image src="{{weatherInfo.f4.day_weather_pic}}" />
+                    <StackLayout col="1">
+                        <Label text="{{weatherDate.f4}}" />
+                        <Label text="{{'全天气温：'+weatherInfo.f4.day_air_temperature+'°C，'+weatherInfo.f4.day_weather}}" />
+                    </StackLayout>
+                    <Label class="wind" row="1" colSpan="2" text="{{weatherInfo.f4.day_wind_direction+','+weatherInfo.f1.day_wind_power}}" />
+                </GridLayout>
+            </StackLayout>
+            <StackLayout tap="weatherTap" row="4" class="fifth">
+                <GridLayout rows="2*,1*" columns="*,*">
+                    <Image src="{{weatherInfo.f5.day_weather_pic}}" />
+                    <StackLayout col="1">
+                        <Label text="{{weatherDate.f5}}" />
+                        <Label text="{{'全天气温：'+weatherInfo.f5.day_air_temperature+'°C，'+weatherInfo.f5.day_weather}}" />
+                    </StackLayout>
+                    <Label class="wind" row="1" colSpan="2" text="{{weatherInfo.f5.day_wind_direction+','+weatherInfo.f1.day_wind_power}}" />
+                </GridLayout>
+            </StackLayout>
+            <StackLayout tap="weatherTap" row="5" class="sixth">
+                <GridLayout rows="2*,1*" columns="*,*">
+                    <Image src="{{weatherInfo.f6.day_weather_pic}}" />
+                    <StackLayout col="1">
+                        <Label text="{{weatherDate.f6}}" />
+                        <Label text="{{'全天气温：'+weatherInfo.f6.day_air_temperature+'°C，'+weatherInfo.f6.day_weather}}" />
+                    </StackLayout>
+                    <Label class="wind" row="1" colSpan="2" text="{{weatherInfo.f6.day_wind_direction+','+weatherInfo.f1.day_wind_power}}" />
+                </GridLayout>
+            </StackLayout>
+            <StackLayout tap="weatherTap" row="6" class="seventh">
+                <GridLayout rows="2*,1*" columns="*,*">
+                    <Image src="{{weatherInfo.f7.day_weather_pic}}" />
+                    <StackLayout col="1">
+                        <Label text="{{weatherDate.f7}}" />
+                        <Label text="{{'全天气温：'+weatherInfo.f7.day_air_temperature+'°C，'+weatherInfo.f7.day_weather}}" />
+                    </StackLayout>
+                    <Label class="wind" row="1" colSpan="2" text="{{weatherInfo.f7.day_wind_direction+','+weatherInfo.f1.day_wind_power}}" />
+                </GridLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
 </DockLayout>

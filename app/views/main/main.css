@@ -92,12 +92,12 @@ DatePicker {
     background-color: #fff;
 }
 
-.bodyPage GridLayout {
+.bodyPage .bodyInfoDay {
     height: 100px;
     background-color: #d71345
 }
 
-.bodyPage GridLayout Label {
+.bodyPage .bodyInfoDay Label {
     height: 50px;
     font-size: 12;
     padding: 15px 20px;
@@ -107,6 +107,87 @@ DatePicker {
     padding: 20px;
     color: #464547;
 }
-.bodyInfo{
+
+.bodyInfo {
+    padding: 20px;
     background-color: #f05b72;
+    font-size: 18px;
+}
+
+.bodyInfo GridLayout {
+    font-size: 12px;
+    padding: 15px 0;
+    height: 150px;
+    color: #ddd;
+}
+
+.weatherPage {
+    color: #fff;
+}
+
+.weatherPage .today {
+    padding: 20px 0;
+    text-align: center;
+    height: 180px;
+    background-color: #ef4136;
+}
+
+.weatherPage .today Label {
+    text-align: center;
+}
+
+.weatherPage .today .title {
+    font-size: 40;
+}
+
+.todaypic {
+    padding: 15px 0;
+}
+
+.forecast {
+    color: #fff;
+}
+
+.forecast Label {
+    padding: 10px 0;
+    color: #fff;
+}
+
+.forecast .wind {
+    text-align: center;
+}
+
+.forecast .first {
+    height: 120px;
+    background-color: #c63c26;
+}
+
+.forecast .second {
+    height: 120px;
+    background-color: #f3715c;
+}
+
+.forecast .third {
+    height: 120px;
+    background-color: #a7573b;
+}
+
+.forecast .fourth {
+    height: 120px;
+    background-color: #aa2116;
+}
+
+.forecast .fifth {
+    height: 120px;
+    background-color: #b64533;
+}
+
+.forecast .sixth {
+    height: 120px;
+    background-color: #b54334;
+}
+
+.forecast .seventh {
+    height: 120px;
+    background-color: #a03939;
 }

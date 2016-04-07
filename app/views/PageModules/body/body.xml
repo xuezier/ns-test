@@ -6,12 +6,21 @@
         </WrapLayout>
         <Button text="Click Start" />
     </StackLayout>
-    <GridLayout row="1" dock="top" columns="1*,*" rows="*,*">
+    <GridLayout class="bodyInfoDay" row="1" dock="top" columns="1*,*" rows="*,*">
         <Label col="0" row="0" text="{{info.Start}}" />
         <Label col="0" row="1" text="Period Start" />
         <Label col="1" row="0" text="{{info.End}}" />
         <Label col="1" row="1" text="Period End" />
     </GridLayout>
     <StackLayout class="bodyInfo" row="2">
+        <Label class="main" text="Menstrual status:    regular" />
+        <GridLayout columns="*,*" rows="*,*,*">
+            <Label text="Menstrual cycle" />
+            <Label col="1" text="28" />
+            <Label row="1" text="Degree of pain" />
+            <Label col="1" row="1" text="Deep" />
+            <Label row="2" text="Period" />
+            <Label col="1" row="2" text="3" />
+        </GridLayout>
     </StackLayout>
 </GridLayout>

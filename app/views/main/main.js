@@ -30,7 +30,7 @@ exports.loaded = function(args) {
         items[1].title = "Health";
         items[2].title = "Weather";
         tapView.items = items;
-        tapView.selectedIndex = 1;
+        tapView.selectedIndex = 2;
         tapView.on("selectedIndexChanged", (aas) => {
             tapView._eachChildView(function(v) {
                 console.log(v)
