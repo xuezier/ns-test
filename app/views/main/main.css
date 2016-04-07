@@ -59,6 +59,17 @@ DatePicker {
     /*background-color: #f05b72;*/
 }
 
+.moodListViewIcon {
+    height: 30px;
+    margin-bottom: 25px;
+}
+
+.moodListViewIcon Label {
+    font-size: 22;
+    color: #f47920;
+    text-align: center;
+}
+
 .moodListView Label {
     font-size: 12;
     padding: 5 0;

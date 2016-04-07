@@ -26,6 +26,14 @@
                             <Label text="{{dayofweek}}"/>
                     </lv:RadListView.itemTemplate>
                 </lv:RadListView>
+                <lv:RadListView class="moodListViewIcon" itemHeight="30" items="{{moodList}}">
+                    <lv:RadListView.listViewLayout>
+                        <lv:ListViewGridLayout scrollDirection="Vertical" spanCount="7" />
+                    </lv:RadListView.listViewLayout>
+                    <lv:RadListView.itemTemplate>
+                            <Label class="icon" text="{{mood}}"/>
+                    </lv:RadListView.itemTemplate>
+                </lv:RadListView>
                 <GridLayout class="moodiconset" columns="*,*,*,*,*,*,*" rows="*,*,*">
                     <Label tap="moodlabeltap" col="0" class="icon" text="{{icon.icon_happy}}" />
                     <Label tap="moodlabeltap" col="1" class="icon" text="{{icon.icon_smile}}" />
@@ -49,7 +57,7 @@
                     <Label tap="moodlabeltap" col="5" row="2" class="icon" text="{{icon.icon_man_woman}}" />
                     <Label tap="moodlabeltap" col="6" row="2" class="icon" text="{{icon.icon_music}}" />
                 </GridLayout>
-                <Button text="tap" tap="ontap" />
+                <Button text="tap" tap="postMood" />
         </StackLayout>
     </ScrollView>
 </DockLayout>

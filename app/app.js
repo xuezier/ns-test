@@ -52,6 +52,8 @@ global.observableArray = require("data/observable-array").ObservableArray;
 global.pageModule = require("ui/page");
 global.frame = require("ui/frame");
 global.view = require("ui/core/view");
+global.http = require("http");
+global.dialogs = require("ui/dialogs");
 
 // import iconPackage
 try {
