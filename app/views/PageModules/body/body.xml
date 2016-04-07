@@ -1,3 +1,17 @@
-<DockLayout>
-    <Label text="body" />
-</DockLayout>
+<GridLayout rows="150,100,*" class="bodyPage" loaded="bodyLoaded" xmlns:dd="nativescript-drop-down">
+    <StackLayout row="0" class="method">
+        <WrapLayout>
+            <Label text="Choose How Pain:" />
+            <dd:DropDown items="{{items}}" selectedIndex="{{selectedIndex}}" itemHeight="30px" />
+        </WrapLayout>
+        <Button text="Click Start" />
+    </StackLayout>
+    <GridLayout row="1" dock="top" columns="1*,*" rows="*,*">
+        <Label col="0" row="0" text="{{info.Start}}" />
+        <Label col="0" row="1" text="Period Start" />
+        <Label col="1" row="0" text="{{info.End}}" />
+        <Label col="1" row="1" text="Period End" />
+    </GridLayout>
+    <StackLayout class="bodyInfo" row="2">
+    </StackLayout>
+</GridLayout>

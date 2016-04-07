@@ -14,7 +14,6 @@ exports.loaded = function(args) {
 
     page.bindingContext = new observable({
         page: page,
-        MoodHeadViewLeft: DeviceInfo.widthDIPs / 2 - 50,
         icon: iconPackage,
     });
 
@@ -31,6 +30,7 @@ exports.loaded = function(args) {
         items[1].title = "Health";
         items[2].title = "Weather";
         tapView.items = items;
+        tapView.selectedIndex = 1;
         tapView.on("selectedIndexChanged", (aas) => {
             tapView._eachChildView(function(v) {
                 console.log(v)

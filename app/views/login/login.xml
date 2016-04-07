@@ -1,5 +1,6 @@
 <Page loaded="loaded" actionBarHidden="true" backgroundSpanUnderStatusBar="true" xmlns:x="nativescript-statusbar">
     <x:StatusBar ios:barStyle="light" android:barStyle="#f05b72" />
+
     <StackLayout>
         <Image src="~/views/imageSource/login.png" />
         <Button tap="jump" text="Click Me Open" class="mainButton" id="mainButton">

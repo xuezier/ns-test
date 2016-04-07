@@ -75,3 +75,38 @@ DatePicker {
     padding: 10px 0;
     font-size: 18;
 }
+
+.bodyPage DropDown {
+    color: #f173ac;
+    height: 30px;
+    width: 80px;
+    background-color: #fff;
+    margin-left: 15px;
+}
+
+.bodyPage DropDown StackLayout {
+    background-color: #fff
+}
+
+.bodyPage {
+    background-color: #fff;
+}
+
+.bodyPage GridLayout {
+    height: 100px;
+    background-color: #d71345
+}
+
+.bodyPage GridLayout Label {
+    height: 50px;
+    font-size: 12;
+    padding: 15px 20px;
+}
+
+.bodyPage .method {
+    padding: 20px;
+    color: #464547;
+}
+.bodyInfo{
+    background-color: #f05b72;
+}

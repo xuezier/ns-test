@@ -11,17 +11,22 @@ for (var i = 6; i > 0; i--) {
 };
 
 var moodPage;
-
 moodHistory.push({ dayofmonth: today.getDate(), dayofweek: timeFactory.getWeekDayEn(today.getDay(), true) });
 
 exports.moodloaded = args => {
     moodPage = args.object;
     moodPage.bindingContext = new observable({
         moodHistory: moodHistory,
+        MoodHeadViewLeft: DeviceInfo.widthDIPs / 2 - 50,
         icon: iconPackage
     });
 };
 exports.ontap = params => {
-    console.log("hehe");
     moodHistory.shift();
+};
+
+// label tap to get what mood be choosen
+exports.moodlabeltap = args => {
+    var mood = "0x" + args.view.text.charCodeAt(0).toString(16);
+    console.log(mood);
 };
